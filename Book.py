@@ -15,6 +15,12 @@ class Book:
     def to_string(self):
         return f"{self.name} {self.fantastical} {self.historical} {self.content} {self.story}"
     
+    def equals(self, other):
+        return (self.name == other.name and
+                self.fantastical == other.fantastical and
+                self.historical == other.historical and
+                self.content == other.content and
+                self.story == other.story)
 
 def book_from_string(str):
     str = str.split(" ")
